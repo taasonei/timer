@@ -12,6 +12,7 @@ import android.view.TextureView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.github.taasonei.myapplication.databinding.ActivityTimerBinding
+import com.github.taasonei.myapplication.util.NotificationUtil
 import com.github.taasonei.myapplication.util.PrefUtil
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar
 import java.util.*
@@ -85,6 +86,7 @@ class TimerActivity : AppCompatActivity() {
         initTimer()
 
         removeAlarm(this)
+        NotificationUtil.hideTimerNotification(this)
     }
 
     override fun onPause() {
@@ -92,9 +94,9 @@ class TimerActivity : AppCompatActivity() {
         if (timerState == TimerState.Running) {
             timer.cancel()
             val wakeUpTime = setAlarm(this, nowSeconds, secondsRemaining)
-
+            NotificationUtil.showTimerRunning(this, wakeUpTime)
         } else if (timerState == TimerState.Paused) {
-
+            NotificationUtil.showTimerPaused(this)
         }
 
         PrefUtil.setPreviousTimerLengthSeconds(timerLengthSeconds, this)
