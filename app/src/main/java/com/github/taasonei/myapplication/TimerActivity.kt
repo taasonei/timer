@@ -46,7 +46,7 @@ class TimerActivity : AppCompatActivity() {
         Stopped, Paused, Running,
     }
 
-    private lateinit var timer: CountDownTimer
+    private var timer: CountDownTimer? = null
     private var timerLengthSeconds = 0L
     private var secondsRemaining = 0L
     private var timerState = TimerState.Stopped
@@ -70,13 +70,13 @@ class TimerActivity : AppCompatActivity() {
         }
 
         binding.fabPause.setOnClickListener {
-            timer.cancel()
+            timer?.cancel()
             timerState = TimerState.Paused
             updateButtons()
         }
 
         binding.fabStop.setOnClickListener {
-            timer.cancel()
+            timer?.cancel()
             onTimerFinished()
         }
     }
@@ -92,7 +92,7 @@ class TimerActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         if (timerState == TimerState.Running) {
-            timer.cancel()
+            timer?.cancel()
             val wakeUpTime = setAlarm(this, nowSeconds, secondsRemaining)
             NotificationUtil.showTimerRunning(this, wakeUpTime)
         } else if (timerState == TimerState.Paused) {
@@ -210,7 +210,11 @@ class TimerActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

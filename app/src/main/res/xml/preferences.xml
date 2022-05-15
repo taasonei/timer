@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SeekBarPreference
+        android:key="com.github.taasonei.timer.timer_length"
+        android:title="Timer Length"
+        android:summary="For how many minutes should the timer run?"
+        android:max="60"
+        app:min="1"
+        android:defaultValue="10"
+        app:showSeekBarValue="true"
+        app:seekBarIncrement="1" />
+
+</androidx.preference.PreferenceScreen>
