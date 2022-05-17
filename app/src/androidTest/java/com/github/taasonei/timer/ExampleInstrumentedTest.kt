@@ -1,4 +1,4 @@
-package com.github.taasonei.myapplication
+package com.github.taasonei.timer
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.github.taasonei.myapplication"
+        applicationId "com.github.taasonei.timer"
         minSdk 26
         targetSdk 32
         versionCode 1

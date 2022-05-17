@@ -1,10 +1,10 @@
-package com.github.taasonei.myapplication
+package com.github.taasonei.timer
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.github.taasonei.myapplication.util.NotificationUtil
-import com.github.taasonei.myapplication.util.PrefUtil
+import com.github.taasonei.timer.util.NotificationUtil
+import com.github.taasonei.timer.util.PrefUtil
 
 class TimerExpiredReceiver : BroadcastReceiver() {
 

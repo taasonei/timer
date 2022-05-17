@@ -1,4 +1,4 @@
-package com.github.taasonei.myapplication
+package com.github.taasonei.timer
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -8,12 +8,11 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Menu
 import android.view.MenuItem
-import android.view.TextureView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.github.taasonei.myapplication.databinding.ActivityTimerBinding
-import com.github.taasonei.myapplication.util.NotificationUtil
-import com.github.taasonei.myapplication.util.PrefUtil
+import com.github.taasonei.timer.databinding.ActivityTimerBinding
+import com.github.taasonei.timer.util.NotificationUtil
+import com.github.taasonei.timer.util.PrefUtil
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar
 import java.util.*
 

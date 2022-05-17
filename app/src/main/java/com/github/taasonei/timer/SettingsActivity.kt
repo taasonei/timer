@@ -1,9 +1,8 @@
-package com.github.taasonei.myapplication
+package com.github.taasonei.timer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.Toolbar
-import com.github.taasonei.myapplication.databinding.ActivitySettingsBinding
+import com.github.taasonei.timer.databinding.ActivitySettingsBinding
 
 class SettingsActivity : AppCompatActivity() {
 

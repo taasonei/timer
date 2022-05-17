@@ -1,4 +1,4 @@
-package com.github.taasonei.myapplication
+package com.github.taasonei.timer
 
 class AppConstants {
     companion object {

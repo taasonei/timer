@@ -1,4 +1,4 @@
-package com.github.taasonei.myapplication.util
+package com.github.taasonei.timer.util
 
 import android.annotation.TargetApi
 import android.app.NotificationChannel
@@ -12,10 +12,10 @@ import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.github.taasonei.myapplication.AppConstants
-import com.github.taasonei.myapplication.R
-import com.github.taasonei.myapplication.TimerActivity
-import com.github.taasonei.myapplication.TimerNotificationActionReceiver
+import com.github.taasonei.timer.AppConstants
+import com.github.taasonei.timer.R
+import com.github.taasonei.timer.TimerActivity
+import com.github.taasonei.timer.TimerNotificationActionReceiver
 import java.text.SimpleDateFormat
 import java.util.*
 

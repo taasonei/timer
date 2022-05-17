@@ -1,9 +1,9 @@
-package com.github.taasonei.myapplication.util
+package com.github.taasonei.timer.util
 
 import android.content.Context
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
-import com.github.taasonei.myapplication.TimerActivity
+import com.github.taasonei.timer.TimerActivity
 
 class PrefUtil {
     companion object {
